@@ -1,0 +1,8 @@
+/build/
+/config/
+/dist/
+/lib/**
+/*.js
+/test/unit/coverage/
+/drag.js
+/bin/
