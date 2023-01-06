@@ -110,6 +110,7 @@
                 slot="reference"
                 type="text"
                 :icon="btn.icon"
+                :size="btn.size || size || 'mini'"
               >删除</el-button>
             </el-popconfirm>
           </template>
@@ -128,6 +129,7 @@
                   slot="reference"
                   type="text"
                   :icon="btn.icon"
+                  :size="btn.size || size || 'mini'"
               >
                 {{btn.label }}
               </el-button>
@@ -138,6 +140,7 @@
               <el-button
                   type="text"
                   :icon="btn.icon"
+                  :size="btn.size || size || 'mini'"
               >
                 {{btn.label }}
                 <i style="margin: 0" class="el-icon-arrow-down el-icon--right"></i>
@@ -154,6 +157,7 @@
             :key="key"
             type="text"
             :icon="btn.icon"
+            :size="btn.size || size || 'mini'"
             :disabled="btn.disabled"
             @click="btn.method(key, rowData)"
           >{{ btn.label }}</el-button>
