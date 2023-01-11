@@ -3,7 +3,7 @@
     <el-form v-bind="$attrs"
              v-on="$listeners" ref="ruleForm" :model="formData" :rules="rules" @submit.native.prevent>
       <el-row>
-        <el-col v-for="item in formList" :key="item.key" :span="item.span?item.span:span">
+        <el-col v-for="item in formList" :key="item.key + item.title" :span="item.span?item.span:span">
           <template v-if="!item.isHideForm">
             <el-form-item
                 :label="item.title+':'"
