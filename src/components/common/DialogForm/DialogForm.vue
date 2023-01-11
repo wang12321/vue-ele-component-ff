@@ -293,7 +293,7 @@
               <div v-else-if="item.type==='slot'" style="text-align: left">
                 <expand-dom :item="item" :render="item.render"/>
               </div>
-              <slot v-else-if="item.type==='slotFormItem'" :name="item.key" />
+              <slot v-else-if="item.type==='slotFormItem'" :name="item.key" :row="item"/>
             </el-form-item>
             <el-form-item v-if="$scopedSlots['formItem']">
               <slot name="formItem" />
