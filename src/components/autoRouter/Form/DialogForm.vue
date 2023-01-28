@@ -57,7 +57,7 @@ export default {
         value:'ff'
       },
       formList: [
-        { title: '昵称', key: 'name', maxlength:"30", type: 'textarea' ,clearable:true},
+        { isLabel:true, title: '昵称', key: 'name', maxlength:"30", type: 'textarea' ,clearable:true},
         { title: '用户', key: 'user', type: 'input' ,clearable:true, disabled:true},
         { clearable:true, title: '是否', key: 'yes', type: 'selectID',options:[{value:'1',label: "是"},{value:'2',label: "否"}],label: 'label',value: 'value' },
         { clearable:true, title: '年份', key: 'year', type: 'year' },
