@@ -14,7 +14,7 @@
                <span slot="label" v-if="item.isLabel">
                 {{ item.title}}
                  <el-tooltip :placement="item.desAlign || 'right'">
-                  <div slot="content">{{item.desContent || '描述信息'}}
+                  <div :class="item.desClassP ? item.desClassP : ''" slot="content">{{item.desContent || '描述信息'}}
                     <img v-if="item.desImg" :class="item.desClass ? item.desClass : ''" style="display: block" :src="item.desImg" alt="">
                   </div>
                   <el-button type="text" style="color: #001528"><i :class="item.icon || 'el-icon-question'"></i></el-button>
