@@ -1,6 +1,6 @@
 {
   "name": "vue-ele-component-ff",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "private": false,
   "description": "封装了ff常用的组件库,如日期选择器、表格及弹窗等",
   "scripts": {

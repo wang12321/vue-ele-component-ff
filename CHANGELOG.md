@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.7](https://github.com/wang12321/vue-ele-component-ff/compare/v2.1.6...v2.1.7) (2023-05-24)
+
+
+### Bug Fixes
+
+* 新增远程属性 ([0f866b1](https://github.com/wang12321/vue-ele-component-ff/commit/0f866b14935e15a885858818f3017b0538add6fc))
+
 ### [2.1.6](https://github.com/wang12321/vue-ele-component-ff/compare/v2.1.5...v2.1.6) (2023-01-28)
 
 
