@@ -93,7 +93,12 @@
                   :filterable="item.filterable"
                   :clearable="item.clearable"
                   :disabled="item.disabled"
+                  :remote-method="item.remoteMethod"
+                  :remote="item.remote"
+                  :loading="item.loading"
                   style="width: 100%;"
+                  @focus="item.focus ? item.focus() : null"
+                  @clear="item.clear ? item.clear() : null"
                   @change="item.change ? item.change() : null"
               >
                 <el-option
@@ -120,6 +125,9 @@
                   :filter-method="item.filterMethod"
                   :remote-method="item.remoteMethod"
                   style="width: 100%;"
+                  :loading="item.loading"
+                  @focus="item.focus ? item.focus() : null"
+                  @clear="item.clear ? item.clear() : null"
                   @change="item.change ? item.change() : null"
               >
                 <el-option

@@ -46,7 +46,7 @@ export default {
       visiblespan12:false,
       rules: {
         name:REQUIRED('请输入昵称'),
-        yes: REQUIRED('请选择是否'),
+        yes: REQUIRED('请选择是否','change'),
         year: REQUIRED('请选择年份'),
         uploadImg: REQUIRED('请上传图片'),
       },

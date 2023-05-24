@@ -62,6 +62,9 @@
                 :style="item.width ? `width:${item.width}` : ''"
                 :filter-method="item.filterMethod"
                 :remote-method="item.remoteMethod"
+                :loading="item.loading"
+                @focus="item.focus ? item.focus() : null"
+                @clear="item.clear ? item.clear() : null"
                 @change="item.change ? item.change() : null"
             >
               <el-option
@@ -88,6 +91,9 @@
                 :style="item.width ? `width:${item.width}` : ''"
                 :filter-method="item.filterMethod"
                 :remote-method="item.remoteMethod"
+                :loading="item.loading"
+                @focus="item.focus ? item.focus() : null"
+                @clear="item.clear ? item.clear() : null"
                 @change="item.change ? item.change() : null"
             >
               <el-option
