@@ -1,6 +1,7 @@
 <template>
   <el-table
       id="ffTable"
+      ref="ffTableRef"
       v-bind="$attrs"
       v-on="$listeners"
       v-loading.iTable="options.loading"

@@ -6,7 +6,8 @@
     </div>
     <el-container>
       <el-main>
-        <TableComponent :table-data="tableData"
+        <TableComponent
+            :table-data="tableData"
                         :table-column="tableColumn"
                         :operates="operates"
                         @sortchange="sortchange">
@@ -37,7 +38,10 @@
         </TableComponent>
 
         <div style="margin: 20px">多选table</div>
-        <TableComponent :table-data="tableData"
+        <TableComponent
+            ref="TableComponentRef"
+
+            :table-data="tableData"
                         :table-column="tableColumn"
                         :options="optionsMulti"
                         :operates="operatesMulti"
@@ -264,6 +268,7 @@ export default {
   mounted() {
     setInterval(()=>{
       this.optionsMulti.loading = false
+
     },4000)
   },
   methods:{
@@ -272,6 +277,12 @@ export default {
       alert(e.column.label + '排序')
     },
     handleSelectionChange(e){
+      console.log(123123,this.$refs.TableComponentRef)
+      console.log(123123,this.$refs.TableComponentRef.$refs.ffTableRef)
+      console.log(123123,e)
+
+      // this.$refs.TableComponentRef.$refs.ffTableRef.toggleRowSelection(this.tableData[0])
+
       alert('已选择'+e.length)
     }
   }
