@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.9](https://github.com/wang12321/vue-ele-component-ff/compare/v2.1.8...v2.1.9) (2023-06-29)
+
+
+### Bug Fixes
+
+* 修改开放校验方式 ([0d831c4](https://github.com/wang12321/vue-ele-component-ff/commit/0d831c4bbd662f479a08a8cfc31c633b93e1c489))
+
 ### [2.1.8](https://github.com/wang12321/vue-ele-component-ff/compare/v2.1.7...v2.1.8) (2023-06-14)
 
 
