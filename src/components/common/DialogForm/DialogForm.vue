@@ -423,12 +423,14 @@ export default {
     close() {
       this.$emit('CANCEL');
     },
-    save(formName) {
+    save(formName = 'ruleForm', callback, errorBack) {
       // eslint-disable-next-line consistent-return
       this.$refs[formName].validate((valid) => {
         if (valid) { // 校验通过
           this.$emit('submit');
+          callback && callback()
         } else {
+          errorBack && errorBack()
           return false;
         }
       });

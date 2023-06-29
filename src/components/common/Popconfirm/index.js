@@ -1,5 +1,5 @@
-import ElPopconfirm from "./Popconfirm";
-ElPopconfirm.install = Vue => {
-    Vue.component(ElPopconfirm.name, ElPopconfirm);
+import Popconfirm from "./Popconfirm";
+Popconfirm.install = Vue => {
+    Vue.component(Popconfirm.name, Popconfirm);
 };
-export default ElPopconfirm;
+export default Popconfirm;

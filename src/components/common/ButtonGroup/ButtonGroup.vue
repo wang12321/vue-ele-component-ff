@@ -168,11 +168,11 @@
 </template>
 
 <script>
-import ElPopconfirm from "../Popconfirm/Popconfirm.vue";
+// import ElPopconfirm from "../Popconfirm/Popconfirm.vue";
 export default {
   name: 'ButtonGroup',
   components:{
-    ElPopconfirm,
+    // ElPopconfirm,
   },
   props: {
     size: {

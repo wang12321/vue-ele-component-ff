@@ -42,7 +42,7 @@ import ElButton from 'element-ui/packages/button';
 import {t} from 'element-ui/src/locale';
 
 export default {
-  name: 'ElPopconfirm',
+  name: 'Popconfirm',
   props: {
     title: {
       type: String
