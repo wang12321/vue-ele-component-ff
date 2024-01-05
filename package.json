@@ -97,7 +97,6 @@
   ],
   "husky": {
     "hooks": {
-      "pre-push": "node bin/openBrowser"
     }
   },
   "keywords": [
