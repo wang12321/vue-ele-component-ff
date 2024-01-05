@@ -39,10 +39,10 @@ function getEntries (dir) {
     } else {
       // src/components/common 根目录除了 js 文件全部忽略
       if (!/common\/\w+\.[^(js)]{1,}/.test(filePath)) {
-        const [fileName] = file.split('.')
-        res[fileName] = resolvePath(`${filePath}`)
-      }else {
-        console.log(123123123)
+        if(!filePath.includes('.DS_Store')){
+          const [fileName] = file.split('.')
+          res[fileName] = resolvePath(`${filePath}`)
+        }
       }
     }
     return res
