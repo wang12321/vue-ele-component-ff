@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.13](https://github.com/wang12321/vue-ele-component-ff/compare/v2.1.12...v2.1.13) (2024-01-05)
+
+
+### Bug Fixes
+
+* 修复bug ([1e79ee7](https://github.com/wang12321/vue-ele-component-ff/commit/1e79ee791863ef082917d60f8e2b0cb1a3aa81ff))
+* 按钮标签 ([6377c6b](https://github.com/wang12321/vue-ele-component-ff/commit/6377c6b379a2c6397fbce9cbdee66936d5f0739f))
+* 更新 ([8ead53f](https://github.com/wang12321/vue-ele-component-ff/commit/8ead53f2b4ef9983c52f5d0447043611896feabc))
+* 更新 ([cb08d0d](https://github.com/wang12321/vue-ele-component-ff/commit/cb08d0d5bd14ad8a749bc751bc0a41958965485b))
+* 测试 ([d3dba63](https://github.com/wang12321/vue-ele-component-ff/commit/d3dba63e6fc4add1c80d658b580dffe8f0ff3696))
+* 测试 ([2c2c29a](https://github.com/wang12321/vue-ele-component-ff/commit/2c2c29abb04e56e72065ace4583617473fa2934d))
+
 ### [2.1.12](https://github.com/wang12321/vue-ele-component-ff/compare/v2.1.11...v2.1.12) (2023-06-29)
 
 ### [2.1.11](https://github.com/wang12321/vue-ele-component-ff/compare/v2.1.10...v2.1.11) (2023-06-29)
