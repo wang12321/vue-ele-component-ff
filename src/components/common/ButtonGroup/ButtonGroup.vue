@@ -151,6 +151,19 @@
               </el-dropdown-menu>
             </el-dropdown>
           </template>
+          <template v-else-if="btn.type === 'badge'">
+            <el-badge is-dot class="item-badge" :key="key">
+              <el-button
+                  style="float: left"
+                  type="text"
+                  :icon="btn.icon"
+                  :size="btn.size || size || 'mini'"
+                  :disabled="btn.disabled"
+                  @click="btn.method(key, rowData)"
+              >{{ btn.label }}</el-button>
+            </el-badge>
+          </template>
+
           <el-button
             v-else
             style="margin-left: 5px"
@@ -293,5 +306,11 @@ export default {
   }
   .el-icon-arrow-down {
     font-size: 12px;
+  }
+  .item-badge{
+    ::v-deep .el-badge__content.is-fixed.is-dot {
+      right: 5px;
+      top: 5px;
+    }
   }
 </style>

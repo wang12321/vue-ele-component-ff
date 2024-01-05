@@ -41,6 +41,8 @@ function getEntries (dir) {
       if (!/common\/\w+\.[^(js)]{1,}/.test(filePath)) {
         const [fileName] = file.split('.')
         res[fileName] = resolvePath(`${filePath}`)
+      }else {
+        console.log(123123123)
       }
     }
     return res
