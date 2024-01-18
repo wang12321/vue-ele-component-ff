@@ -210,6 +210,7 @@ export default {
           {
             label: '查看',
             show: true,
+            labelNum:'tzmc',
             btnType: 'primary',
             plain: true,
             method: (index, row) => {

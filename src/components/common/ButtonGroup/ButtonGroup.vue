@@ -173,7 +173,7 @@
             :size="btn.size || size || 'mini'"
             :disabled="btn.disabled"
             @click="btn.method(key, rowData)"
-          >{{ btn.label }}</el-button>
+          >{{ btn.label }}{{ rowData[btn.labelNum]?'(' + rowData[btn.labelNum] + ')':'' }}</el-button>
         </template>
       </div>
     </template>
