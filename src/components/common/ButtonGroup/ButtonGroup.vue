@@ -24,7 +24,7 @@
                   :type="btn.btnType"
                   :size="btn.size || size || 'mini'"
                   :icon="btn.icon"
-                  :disabled="btn.disabled"
+                  :disabled="onDisabled(btn.disabled)"
                   :plain="btn.plain"
                   class="button"
                 >
@@ -48,7 +48,7 @@
                     :type="btn.btnType"
                     :size="btn.size || size || 'mini'"
                     :icon="btn.icon"
-                    :disabled="btn.disabled"
+                    :disabled="onDisabled(btn.disabled)"
                     :plain="btn.plain"
                     class="button"
                 >
@@ -62,7 +62,7 @@
                     :type="btn.btnType"
                     :size="btn.size || size || 'mini'"
                     :icon="btn.icon"
-                    :disabled="btn.disabled"
+                    :disabled="onDisabled(btn.disabled)"
                     :plain="btn.plain"
                     class="button"
                 >
@@ -70,7 +70,7 @@
                   <i style="margin: 0" class="el-icon-arrow-down el-icon--right"></i>
                 </el-button>
                 <el-dropdown-menu slot="dropdown">
-                  <el-dropdown-item :disabled="itemBtn.onDisabled && itemBtn.onDisabled(index, rowData)" :class="itemBtn.class" v-for="(itemBtn,index) in  btn.dropdownList" :key="index" @click.native.prevent="itemBtn.method(index, rowData)">
+                  <el-dropdown-item :disabled="onDisabled(itemBtn.disabled)" :class="itemBtn.class" v-for="(itemBtn,index) in  btn.dropdownList" :key="index" @click.native.prevent="itemBtn.method(index, rowData)">
                     {{ itemBtn.name }}</el-dropdown-item>
                 </el-dropdown-menu>
               </el-dropdown>
@@ -81,7 +81,7 @@
               :type="btn.btnType"
               :size="btn.size || size || 'mini'"
               :icon="btn.icon"
-              :disabled="btn.disabled"
+              :disabled="onDisabled(btn.disabled)"
               :plain="btn.plain"
               class="button"
               @click.native.prevent="btn.method(key, rowData)"
@@ -146,7 +146,7 @@
                 <i style="margin: 0" class="el-icon-arrow-down el-icon--right"></i>
               </el-button>
               <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item :disabled="itemBtn.onDisabled && itemBtn.onDisabled(index, rowData)" :class="itemBtn.class" v-for="(itemBtn,index) in btn.dropdownList" :key="index" @click.native.prevent="itemBtn.method(index, rowData)">
+                <el-dropdown-item :disabled="onDisabled(itemBtn.disabled)" :class="itemBtn.class" v-for="(itemBtn,index) in btn.dropdownList" :key="index" @click.native.prevent="itemBtn.method(index, rowData)">
                   {{ itemBtn.name }}</el-dropdown-item>
               </el-dropdown-menu>
             </el-dropdown>
@@ -158,7 +158,7 @@
                   type="text"
                   :icon="btn.icon"
                   :size="btn.size || size || 'mini'"
-                  :disabled="btn.disabled"
+                  :disabled="onDisabled(btn.disabled)"
                   @click="btn.method(key, rowData)"
               >{{ btn.label }}</el-button>
             </el-badge>
@@ -171,7 +171,7 @@
             type="text"
             :icon="btn.icon"
             :size="btn.size || size || 'mini'"
-            :disabled="btn.disabled"
+            :disabled="onDisabled(btn.disabled)"
             @click="btn.method(key, rowData)"
           >{{ btn.label }}{{ rowData[btn.labelNum]?'(' + rowData[btn.labelNum] + ')':'' }}</el-button>
         </template>
@@ -217,6 +217,16 @@ export default {
           }
         }
       ])
+    }
+  },
+  methods:{
+    onDisabled(isDisabled){
+      if(typeof isDisabled === 'boolean'){
+        return isDisabled
+      }else if(typeof isDisabled === 'function'){
+        return isDisabled(this.rowData)
+      }
+      return false
     }
   }
 }
