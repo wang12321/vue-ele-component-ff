@@ -98,6 +98,7 @@ export default {
           label: '名称',
           prop: 'tzmc',
           align: 'left',
+          isHidden:true,
           showTip:(h, {column}) => {
             return  renderTip(h, {column},'tip')
           }
@@ -105,6 +106,7 @@ export default {
         {
           label: '权限',
           prop: 'gxlx',
+          isHidden:true,
           align: 'left',
           showOverflowTooltip:true,
           render: (h, params) => {

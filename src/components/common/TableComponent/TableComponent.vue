@@ -30,7 +30,7 @@
           <slot :name="column.slot" :row="column"></slot>
         </template>
         <el-table-column
-            v-else
+            v-else-if="!column.isHidden"
             :key="column.label"
             :prop="column.prop"
             :label="column.label"
