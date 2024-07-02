@@ -38,7 +38,7 @@
             :width="column.width"
             :fixed="column.fixed || false"
             :render-header="column.showTip?column.showTip:showTip"
-            :sortable="sortable?'custom':false"
+            :sortable="(sortable || column.sortable)?'custom':false"
             :show-overflow-tooltip="column.showOverflowTooltip"
         >
           <template slot-scope="scope">
